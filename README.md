@@ -12,6 +12,6 @@ tar xfvz ../case_rans2p_cyl.tar.gz
 edit user_param.py accordingly
 source <proteus_build_dir>/1-setup-proteus.sh
 which parun
-./1-run.sh output
+./1-run.sh output_dir
 ```
 
