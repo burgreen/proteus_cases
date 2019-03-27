@@ -48,7 +48,8 @@ coefficients_1p = RANS2P.Coefficients(epsFact=user_param.epsFact_viscosity,
                                    useRBLES             = 0.0,
                                    useMetrics           = 1.0)
 
-print """ turn off by xwang
+'''
+print( 'turn off by xwang' )
 coefficients_2p = RANS2P.Coefficients(
   epsFact                = epsFact_viscosity,
   sigma                  = 0.0,
@@ -69,7 +70,8 @@ coefficients_2p = RANS2P.Coefficients(
   forceStrongDirichlet   = 0,
   turbulenceClosureModel = ns_closure
 )
-"""
+'''
+
 coefficients                           = coefficients_1p 
 #xw if user_param.nphase > 1: coefficients = coefficients_2p 
 

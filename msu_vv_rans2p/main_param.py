@@ -30,15 +30,15 @@ if user_param.nphase > 1: modeVF = 2
 # Input checks
 
 if spaceOrder not in [1,2]:
-    print "INVALID: spaceOrder" + spaceOrder
+    print( "INVALID: spaceOrder" + spaceOrder )
     sys.exit()    
     
 if useRBLES not in [0.0, 1.0]:
-    print "INVALID: useRBLES" + useRBLES 
+    print( "INVALID: useRBLES" + useRBLES  )
     sys.exit()
 
 if useMetrics not in [0.0, 1.0]:
-    print "INVALID: useMetrics"
+    print( "INVALID: useMetrics" )
     sys.exit()
     
 #  Discretization   
@@ -73,11 +73,11 @@ parallelPartitioningType = proteus.MeshTools.MeshParallelPartitioningTypes.node
 nLayersOfOverlapForParallel = 0
 use_petsc4py=True
 
-print '----------------', user_param.filename
+print( '----------------', user_param.filename )
 
 domain = MeshFileDomain.MeshFileDomain(user_param.filename,3) 
 
-print '----------------', domain
+print( '----------------', domain )
 
 for key in user_param.bc_zone.keys():
   bc = user_param.bc_zone[key]
@@ -132,7 +132,7 @@ rho_1 = user_param.fluid[phase_1]['rho']
 mu_1  = user_param.fluid[phase_1]['mu']
 nu_1  = mu_1/rho_1
 
-print 'phases =', phase_0, phase_1
+print( 'phases =', phase_0, phase_1 )
 
 # Surface tension
 
